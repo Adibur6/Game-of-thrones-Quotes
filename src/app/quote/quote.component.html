@@ -1,11 +1,13 @@
 <!-- quote.component.html -->
 
 <div class="quotes">
-  <h2>Game of Thrones Quotes</h2>
-  <ul>
-    <li *ngFor="let quote of quotes">
-      <div class="quote-content">{{ quote.sentence }}</div>
-      <div class="character-name">{{ quote.character.name }}</div>
-    </li>
-  </ul>
-</div>
+    <h2>Game of Thrones Quotes</h2>
+    <button class="refresh-button" (click)="refreshQuotes()">Refresh</button> <!-- Add the refresh button -->
+    <ul>
+      <li *ngFor="let quote of quotes">
+        <div class="quote-content">{{ quote.sentence }}</div>
+        <div class="character-name">{{ quote.character.name }}</div>
+      </li>
+    </ul>
+  </div>
+  

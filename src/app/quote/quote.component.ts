@@ -30,5 +30,9 @@ export class QuoteComponent implements OnInit {
         this.quotes = data;
       });
   }
+  refreshQuotes(): void {
+    const numberOfQuotes = 5; // You can change this to the desired number of quotes
+    this.getQuotes(numberOfQuotes);
+  }
 
 }
