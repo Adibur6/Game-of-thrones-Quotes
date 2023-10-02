@@ -16,7 +16,7 @@ Game of Thrones Quotes is a web application that allows users to fetch and displ
 
 ## Demo
 
-[View Demo](https://your-demo-link.com) <!-- Optional: You can include a live demo link here -->
+[View Demo](https://game-of-thrones-quote.netlify.app/) <!-- Optional: You can include a live demo link here -->
 
 ## Features
 
