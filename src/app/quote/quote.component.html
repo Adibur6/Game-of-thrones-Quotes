@@ -1,7 +1,12 @@
+<!-- quote.component.html -->
+
 <div class="quotes">
     <h2>Game of Thrones Quotes</h2>
     <ul>
-      <li *ngFor="let quote of quotes">{{ quote }}</li>
+      <li *ngFor="let quote of quotes">
+        <div class="quote-content">{{ quote.sentence }}</div>
+        <div class="character-name">{{ quote.character.name }}</div>
+      </li>
     </ul>
   </div>
   

@@ -1,5 +1,14 @@
+// quote.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+interface Quote {
+  sentence: string;
+  character: {
+    name: string;
+  };
+}
 
 @Component({
   selector: 'app-quote',
@@ -7,18 +16,19 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quotes: string[] = [];
+  quotes: Quote[] = [];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.getQuotes(5); // You can set the initial number of quotes here
+    this.getQuotes(5);
   }
 
   getQuotes(numberOfQuotes: number): void {
-    this.http.get<any[]>(`https://api.gameofthronesquotes.xyz/v1/random/${numberOfQuotes}`)
+    this.http.get<Quote[]>(`https://api.gameofthronesquotes.xyz/v1/random/${numberOfQuotes}`)
       .subscribe((data) => {
-        this.quotes = data.map(item => item.sentence);
+        this.quotes = data;
       });
   }
+
 }
