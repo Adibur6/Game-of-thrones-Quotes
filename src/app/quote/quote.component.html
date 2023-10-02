@@ -4,7 +4,7 @@
     <h2>Game of Thrones Quotes</h2>
     <button class="refresh-button" (click)="refreshQuotes()">Refresh</button> <!-- Add the refresh button -->
     <ul>
-      <li *ngFor="let quote of quotes">
+      <li *ngFor="let quote of quotes" class="quote-card">
         <div class="quote-content">{{ quote.sentence }}</div>
         <div class="character-name">{{ quote.character.name }}</div>
       </li>
